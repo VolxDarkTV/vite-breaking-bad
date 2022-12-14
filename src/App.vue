@@ -4,10 +4,12 @@
   import Loader from './components/Loader.vue';
   import AppHeader from './components/AppHeader.vue';
   import CharacterList from './components/CharacterList.vue';
+  import CharactersFound from './components/CharactersFound.vue';
   export default{
     components:{
       AppHeader,
       CharacterList,
+      CharactersFound,
       Loader,
     },
     data(){
@@ -38,6 +40,7 @@
   <Loader/>
     <AppHeader :msg="store.titolo"/>
     <main>
+      <CharactersFound/>
       <CharacterList/>
     </main>
 </template>

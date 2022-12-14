@@ -14,7 +14,7 @@
 </script>
 
 <template>
-    <section class="container">
+    <section class="container mt-3">
         <div class="row">
             <div class="d-flex flex-wrap justify-content-center gap-3 col">
 
