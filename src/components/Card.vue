@@ -69,9 +69,13 @@
     color: rgb(239, 233, 32);
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
-ul li{
-    display: flex;
+ul{
+    margin-left: -32px;
+
+    & li{
+        display: flex;
     justify-content: flex-start;
     gap: 5px;
+    }
 }
 </style>
