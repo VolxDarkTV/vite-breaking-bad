@@ -15,13 +15,18 @@
 
 <template>
     <section class="container">
+        <div class="row">
+            <div class="d-flex flex-wrap justify-content-center gap-3 col">
 
-        <Card/>
+                <Card v-for="character in store.characterList" :key="character.id" :item="character"/>
+                
+            </div>
+        </div>
         
     </section>
 </template>
 
 <style lang="scss" scoped>
-
+    @use '../styles/general.scss' as *;
 
 </style>
