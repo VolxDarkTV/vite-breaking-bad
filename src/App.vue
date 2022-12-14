@@ -1,12 +1,14 @@
 <script>
   import {store} from './store';
   import axios from 'axios';
+  import Loader from './components/Loader.vue';
   import AppHeader from './components/AppHeader.vue';
   import CharacterList from './components/CharacterList.vue';
   export default{
     components:{
       AppHeader,
       CharacterList,
+      Loader,
     },
     data(){
       return{
@@ -33,6 +35,7 @@
 </script>
 
 <template>
+  <Loader/>
     <AppHeader :msg="store.titolo"/>
     <main>
       <CharacterList/>
