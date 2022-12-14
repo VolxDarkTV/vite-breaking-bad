@@ -1,28 +1,22 @@
 <script>
-    import {store} from '../store';
     export default{
-        props:{
-
-        },
-        data(){
-            return{
-                store,
-            }
-        }
+        props:['item']
     }
 </script>
 
 <template>
 
    <!-- Creare la struttura della card -->
-    <div class="card">
-        <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="#">
-        <h3>name</h3>
+    <div class="card my_card">
+        <img :src="item.image" alt="#">
+        <h3>{{item.name}}</h3>
     </div>
     
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/general.scss' as *;
-
+.my_card{
+    max-width: 300px;
+}
 </style>

@@ -1,5 +1,6 @@
 <script>
   import {store} from './store';
+  import axios from 'axios';
   import AppHeader from './components/AppHeader.vue';
   import CharacterList from './components/CharacterList.vue';
   export default{
@@ -11,7 +12,23 @@
       return{
         store,
       }
-    }
+    },
+    methods:{
+      getCharacters(){
+        axios
+          .get(store.apiURL)
+          .then(res => {
+            store.characterList = res.data.results;
+          })
+          .catch(err => {
+            console.log('errori', err);
+          })
+
+        }
+    },
+    mounted(){
+      this.getCharacters();
+    },
   }
 </script>
 
