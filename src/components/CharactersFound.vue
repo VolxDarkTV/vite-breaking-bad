@@ -39,7 +39,6 @@ export default{
                 <option value="" @click.prevent="store.searchGender = 'female'">female</option>
                 <option value="" @click.prevent="store.searchGender = 'genderless'">genderless</option>
                 <option value="" @click.prevent="store.searchGender = 'unknown'">unknown</option>
-
             </select>
             <!-- Species -->
             <select name="" id="">
