@@ -21,8 +21,8 @@
       getCharacters(){
         let myUrl = store.apiURL;
 
-        if(store.searchName || store.searchStatus !== ''){
-          myUrl += `?${store.apiNameParameter}=${store.searchName}&${store.apiStatusParameter}=${store.searchStatus}`
+        if(store.searchName || store.searchStatus || store.searchSpecies || store.searchGender !== ''){
+          myUrl += `?${store.apiNameParameter}=${store.searchName}&${store.apiStatusParameter}=${store.searchStatus}&${store.apiSpeciesParameter}=${store.searchSpecies}&${store.apiGenderParameter}=${store.searchGender}`
         }
 
         axios

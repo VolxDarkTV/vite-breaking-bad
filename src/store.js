@@ -5,6 +5,10 @@ export const store = reactive ({
     titolo:'Rick & Morty',
     searchName: '',
     searchStatus: '',
+    searchSpecies: '',
+    searchGender: '',
     apiNameParameter: "name",
     apiStatusParameter: "status",
+    apiSpeciesParameter: 'species',
+    apiGenderParameter: 'gender',
 });
