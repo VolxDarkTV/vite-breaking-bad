@@ -19,8 +19,14 @@
     },
     methods:{
       getCharacters(){
+        let myUrl = store.apiURL;
+
+        if(store.searchName || store.apiStatusParameter !== ''){
+          myUrl += `?${store.apiNameParameter}=${store.searchName}&${store.apiStatusParameter}=${store.searchStatus}`
+        }
+
         axios
-          .get(store.apiURL)
+          .get(myUrl)
           .then(res => {
             store.characterList = res.data.results;
           })
@@ -40,7 +46,7 @@
   <Loader/>
   <AppHeader :msg="store.titolo"/>
   <main>
-    <CharactersFound/>
+    <CharactersFound @search="getCharacters"/>
     <CharacterList/>
   </main>
 </template>

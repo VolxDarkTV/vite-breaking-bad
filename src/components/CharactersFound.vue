@@ -11,10 +11,20 @@ export default{
 
 <template>
     <section class="container my_container d-flex">
-        <div class="d-flex justify-content-start align-items-center">
+        <div class="d-flex justify-content-start align-items-center gap-5">
             <h5>
                 Found <span>{{store.characterList.length}}</span> Characters
             </h5>
+            <input type="text" v-model="store.searchName">
+            <select name="" id="">
+                <option value="">-- secect status --</option>
+                <option value="" @click.prevent="store.searchStatus = 'alive'">alive</option>
+                <option value="" @click.prevent="store.searchStatus = 'dead'">dead</option>
+                <option value="" @click.prevent="store.searchStatus = 'unknown'">unknown</option>
+            </select>
+            <button class="btn btn-primary" @click.prevent="$emit('search')">
+                Search
+            </button>
         </div>
     </section>
 </template>
