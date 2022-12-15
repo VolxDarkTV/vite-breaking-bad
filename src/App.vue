@@ -21,7 +21,7 @@
       getCharacters(){
         let myUrl = store.apiURL;
 
-        if(store.searchName || store.apiStatusParameter !== ''){
+        if(store.searchName || store.searchStatus !== ''){
           myUrl += `?${store.apiNameParameter}=${store.searchName}&${store.apiStatusParameter}=${store.searchStatus}`
         }
 
