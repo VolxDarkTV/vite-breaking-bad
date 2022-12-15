@@ -5,13 +5,20 @@ export default{
             return{
                 store,
             }
+        },
+        methods:{
+            resetSearch(){
+                store.searchName = '';
+                store.searchStatus = '';
+                this.$emit('search');
+            }
         }
     }
 </script>
 
 <template>
     <section class="container my_container d-flex">
-        <div class="d-flex justify-content-start align-items-center gap-5">
+        <div class="my_position d-flex align-items-center gap-3">
             <h5>
                 Found <span>{{store.characterList.length}}</span> Characters
             </h5>
@@ -25,6 +32,9 @@ export default{
             <button class="btn btn-primary" @click.prevent="$emit('search')">
                 Search
             </button>
+            <button class="btn btn-warning" @click.prevent="resetSearch()">
+                Reset
+            </button>
         </div>
     </section>
 </template>
@@ -33,7 +43,7 @@ export default{
     @use '../styles/general.scss' as *;
 
     .my_container{
-        width: 80%;
+        min-width: 100%;
         height: 100px;
         background-color: #212529;
         & h5{
@@ -42,5 +52,8 @@ export default{
                 color: rgb(152, 89, 235);
             }
         }
+    }
+    .my_position {
+        margin: 0 auto;
     }
 </style>
