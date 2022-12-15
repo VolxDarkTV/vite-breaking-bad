@@ -19,7 +19,7 @@ export default{
 </script>
 
 <template>
-    <section class="container my_container d-flex">
+    <section class="container my_container d-flex rounded">
         <div class="my_position d-flex align-items-center gap-3">
             <h5>
                 Found <span>{{store.characterList.length}}</span> Characters
