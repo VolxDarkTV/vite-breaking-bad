@@ -2,6 +2,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
+import Loader from './components/Loader.vue'
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -15,5 +16,5 @@ import { faCircle, faCircleDot, faRecycle, faUserSecret } from '@fortawesome/fre
 library.add(faUserSecret, faRecycle)
 
 createApp(App)
-.component('font-awesome-icon', FontAwesomeIcon)
+.component('font-awesome-icon', FontAwesomeIcon, Loader)
 .mount('#app')

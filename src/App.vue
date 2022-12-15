@@ -7,10 +7,10 @@
   import CharactersFound from './components/CharactersFound.vue';
   export default{
     components:{
+      Loader,
       AppHeader,
       CharacterList,
       CharactersFound,
-      Loader,
     },
     data(){
       return{
@@ -28,7 +28,7 @@
             console.log('errori', err);
           })
 
-        }
+      },
     },
     mounted(){
       this.getCharacters();
@@ -38,11 +38,11 @@
 
 <template>
   <Loader/>
-    <AppHeader :msg="store.titolo"/>
-    <main>
-      <CharactersFound/>
-      <CharacterList/>
-    </main>
+  <AppHeader :msg="store.titolo"/>
+  <main>
+    <CharactersFound/>
+    <CharacterList/>
+  </main>
 </template>
 
 <style lang="scss">
