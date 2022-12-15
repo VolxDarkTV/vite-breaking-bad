@@ -22,7 +22,7 @@ export default{
             <h5>
                 Found <span>{{store.characterList.length}}</span> Characters
             </h5>
-            <input type="text" v-model="store.searchName">
+            <input type="text" v-model="store.searchName" placeholder="Search for Name">
             <select name="" id="">
                 <option value="">-- secect status --</option>
                 <option value="" @click.prevent="store.searchStatus = 'alive'">alive</option>
